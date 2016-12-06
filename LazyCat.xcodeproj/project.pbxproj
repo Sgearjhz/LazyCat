@@ -10,15 +10,17 @@
 		E948366F1DC09BEA001334C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E948366E1DC09BEA001334C5 /* AppDelegate.swift */; };
 		E94836731DC09BEB001334C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E94836721DC09BEB001334C5 /* Assets.xcassets */; };
 		E9555D631DC1F39700EA4D38 /* JSBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9555D621DC1F39700EA4D38 /* JSBridge.swift */; };
+		E9D765A41DF2C8D500EE1369 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9D765A61DF2C8D500EE1369 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E948366B1DC09BEA001334C5 /* LazyCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E948366E1DC09BEA001334C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E94836711DC09BEA001334C5 /* application.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = application.js; sourceTree = "<group>"; };
 		E94836721DC09BEB001334C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E94836741DC09BEB001334C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9555D621DC1F39700EA4D38 /* JSBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSBridge.swift; sourceTree = "<group>"; };
+		E9D765A51DF2C8D500EE1369 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E9D765A71DF2C9C700EE1369 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				E94836721DC09BEB001334C5 /* Assets.xcassets */,
 				E94836741DC09BEB001334C5 /* Info.plist */,
 				E94836701DC09BEA001334C5 /* Supporting Files */,
+				E9D765A61DF2C8D500EE1369 /* InfoPlist.strings */,
 			);
 			path = LazyCat;
 			sourceTree = "<group>";
@@ -63,7 +66,6 @@
 		E94836701DC09BEA001334C5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E94836711DC09BEA001334C5 /* application.js */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -111,6 +113,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
 			);
 			mainGroup = E94836621DC09BEA001334C5;
 			productRefGroup = E948366C1DC09BEA001334C5 /* Products */;
@@ -128,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E94836731DC09BEB001334C5 /* Assets.xcassets in Resources */,
+				E9D765A41DF2C8D500EE1369 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,11 +149,24 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		E9D765A61DF2C8D500EE1369 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9D765A51DF2C8D500EE1369 /* en */,
+				E9D765A71DF2C9C700EE1369 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		E94836751DC09BEB001334C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -200,6 +217,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -247,7 +265,7 @@
 				DEVELOPMENT_TEAM = SGZE33W2XX;
 				INFOPLIST_FILE = LazyCat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hengdi.LazyCat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fuzhuo.lazycat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -261,7 +279,7 @@
 				DEVELOPMENT_TEAM = SGZE33W2XX;
 				INFOPLIST_FILE = LazyCat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hengdi.LazyCat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fuzhuo.lazycat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

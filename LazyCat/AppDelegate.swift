@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
     //static let tvBaseURL = "http://localhost/fuzhuo.github.com"
     static let tvBaseURL = "https://fuzhuo.github.io"
     static let tvBootURL = "\(AppDelegate.tvBaseURL)/application.js"
+    //static let tvBootURL = "\(AppDelegate.tvBaseURL)/application_store.js"
     
     // MARK: Javascript Execution Helper
     
