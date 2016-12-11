@@ -6,9 +6,9 @@
 
 后端代码 https://github.com/fuzhuo/fuzhuo.github.com
 
-目前包括: youku, tumblr, neteaseMusic, lava, ximalaya, TV直播，pptv
+目前包括: youku, viu.tv, tumblr, neteaseMusic, lava, ximalaya, TV直播，pptv
 
-![](https://fuzhuo.github.io/icons/lazycat.png)
+<img src="https://fuzhuo.github.io/icons/lazycat.png" width="200"/>
 
 ![](https://fuzhuo.github.io/icons/homepage.png)
 
