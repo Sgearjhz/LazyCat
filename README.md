@@ -4,10 +4,6 @@
 
 如果没有mac或xcode可以采用TestFlight的方式安装，请到 https://fuzhuo.github.io 中回复并附上邮箱地址，会发送测试邀请
 
-后端代码 https://github.com/fuzhuo/fuzhuo.github.com
-
-目前包括: youku, viu.tv, tumblr, neteaseMusic, lava, ximalaya, TV直播，pptv
-
 <img src="https://fuzhuo.github.io/icons/lazycat.png" width="200"/>
 
 ![](https://fuzhuo.github.io/icons/homepage.png)
