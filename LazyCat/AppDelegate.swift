@@ -8,18 +8,19 @@
 
 import UIKit
 import TVMLKit
+import SocketRocket
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDelegate, SRWebSocketDelegate {
     
     var window: UIWindow?
     var appController: TVApplicationController?
+    var launchOptions: [UIApplicationLaunchOptionsKey: Any]?
     
     // tvBaseURL points to a server on your local machine. To create a local server for testing purposes, use the following command inside your project folder from the Terminal app: ruby -run -ehttpd . -p9001. See NSAppTransportSecurity for information on using a non-secure server.
-    //static let tvBaseURL = "http://localhost/fuzhuo.github.com"
     static let tvBaseURL = "https://fuzhuo.github.io"
+    //static let tvBaseURL = "http://localhost:8080"
     static let tvBootURL = "\(AppDelegate.tvBaseURL)/application.js"
-    //static let tvBootURL = "\(AppDelegate.tvBaseURL)/application_store.js"
     
     // MARK: Javascript Execution Helper
     
@@ -35,7 +36,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
     
     // MARK: UIApplicationDelegate
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions _launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        self.launchOptions = _launchOptions
+        startAPP()
+        self.socketConnect()
+        return true
+    }
+    
+    func startAPP() {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
         
@@ -56,8 +64,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
         }
         
         appController = TVApplicationController(context: appControllerContext, window: window, delegate: self)
-        
-        return true
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
@@ -120,5 +126,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
     
     func appController(_ appController: TVApplicationController, didStop options: [String: Any]?) {
         print("\(#function) invoked with options: \(options)")
+    }
+    
+    var socketio: SRWebSocket?
+    func webSocket(_ webSocket: SRWebSocket!, didReceiveMessage message: Any!) {
+        let msg = message as! String
+        print("socket Message: \(msg)\n")
+        self.reloadPages()
+    }
+    func webSocketDidOpen(_ webSocket: SRWebSocket!) {
+        print("socket did open\n");
+    }
+    
+    func socketConnect() {
+        print("socket connect start...");
+        socketio = SRWebSocket(url: URL(string: "ws://127.0.0.1:35728/"))
+        socketio!.delegate = self
+        socketio!.open()
+    }
+    
+    func reloadPages() {
+        executeRemoteMethod("forceReload", completion: { (success: Bool) in
+            print("reload \(success)")
+        })
     }
 }

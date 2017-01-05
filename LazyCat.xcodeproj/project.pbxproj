@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C90D721CDD37D8878A40A3C /* Pods_LazyCat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F384B3B94C4C8090A824A66 /* Pods_LazyCat.framework */; };
 		E948366F1DC09BEA001334C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E948366E1DC09BEA001334C5 /* AppDelegate.swift */; };
 		E94836731DC09BEB001334C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E94836721DC09BEB001334C5 /* Assets.xcassets */; };
 		E9555D631DC1F39700EA4D38 /* JSBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9555D621DC1F39700EA4D38 /* JSBridge.swift */; };
@@ -14,6 +15,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E49F3E46F02C3309851D91A /* Pods-LazyCat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyCat.release.xcconfig"; path = "Pods/Target Support Files/Pods-LazyCat/Pods-LazyCat.release.xcconfig"; sourceTree = "<group>"; };
+		7DC46A1B8470138B1D851AAA /* Pods-LazyCat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazyCat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LazyCat/Pods-LazyCat.debug.xcconfig"; sourceTree = "<group>"; };
+		8F384B3B94C4C8090A824A66 /* Pods_LazyCat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazyCat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E948366B1DC09BEA001334C5 /* LazyCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E948366E1DC09BEA001334C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E94836721DC09BEB001334C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,17 +32,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C90D721CDD37D8878A40A3C /* Pods_LazyCat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E1B506CF31529842209E58F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7DC46A1B8470138B1D851AAA /* Pods-LazyCat.debug.xcconfig */,
+				3E49F3E46F02C3309851D91A /* Pods-LazyCat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		91758EB952BC25A6CAF9C66C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F384B3B94C4C8090A824A66 /* Pods_LazyCat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E94836621DC09BEA001334C5 = {
 			isa = PBXGroup;
 			children = (
 				E948366D1DC09BEA001334C5 /* LazyCat */,
 				E948366C1DC09BEA001334C5 /* Products */,
+				6E1B506CF31529842209E58F /* Pods */,
+				91758EB952BC25A6CAF9C66C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E94836771DC09BEB001334C5 /* Build configuration list for PBXNativeTarget "LazyCat" */;
 			buildPhases = (
+				129D8A4484CFC49F108C5A40 /* [CP] Check Pods Manifest.lock */,
 				E94836671DC09BEA001334C5 /* Sources */,
 				E94836681DC09BEA001334C5 /* Frameworks */,
 				E94836691DC09BEA001334C5 /* Resources */,
+				FC993C72FE2CEBF0CDD86F75 /* [CP] Embed Pods Frameworks */,
+				BF21539D255310A47C9799C7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +163,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		129D8A4484CFC49F108C5A40 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BF21539D255310A47C9799C7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LazyCat/Pods-LazyCat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC993C72FE2CEBF0CDD86F75 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LazyCat/Pods-LazyCat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E94836671DC09BEA001334C5 /* Sources */ = {
@@ -259,6 +334,7 @@
 		};
 		E94836781DC09BEB001334C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DC46A1B8470138B1D851AAA /* Pods-LazyCat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -273,6 +349,7 @@
 		};
 		E94836791DC09BEB001334C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E49F3E46F02C3309851D91A /* Pods-LazyCat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
