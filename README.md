@@ -22,8 +22,6 @@ If you don't have a mac a apple developer account or not familiar with xcode, yo
 
 <img src="https://p1.bqimg.com/567571/9d672deb8cb0d7ff.png" width="960"/>
 
-![](https://fuzhuo.github.io/icons/homepage.png)
-
 哦哦哦,加个群交流下也不错
 
 <img src="https://p1.bqimg.com/567571/63dab6eb96777a8d.jpg" width="200" />
