@@ -4,6 +4,8 @@
 
 现在可用的只能安装TestFlight版本了，请到https://fuzhuo.github.io 中回复并附上邮箱地址，会发送测试邀请
 
+用到的弹幕播放器开源了[地址](https://github.com/fuzhuo/DanMuPlayer)
+
 ![](https://ws4.sinaimg.cn/large/006tNc79gy1fi34xa1cs8j30vm0hs4ks.jpg)
 
 ![](https://ws4.sinaimg.cn/large/006tNc79gy1fi34k2yt4ej30zk0k04qp.jpg)
